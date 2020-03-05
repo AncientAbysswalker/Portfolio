@@ -104,6 +104,17 @@
 
 		}
 
+		// Mouseover Video
+		var mouseover = $('.mouseover');
+
+		$mouseover.on('mouseenter', function() {
+			$mouseover.get(0).play();
+		});
+
+		$mouseover.on('mouseout', function() {
+			$mouseover.get(0).pause();
+		});
+
 		// Scrolly.
 		$('.scrolly').scrolly();
 
