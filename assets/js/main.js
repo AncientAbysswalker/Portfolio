@@ -105,7 +105,7 @@
 		}
 
 		// Mouseover Video
-		var mouseover = $('.mouseover');
+		var $mouseover = $('.mouseover');
 
 		$mouseover.on('mouseenter', function() {
 			$mouseover.get(0).play();
