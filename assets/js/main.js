@@ -104,16 +104,39 @@
 
 		}
 
-		// Mouseover Video
-		var $mouseover = $('.mouseover');
+		// // Mouseover Video
+		// var $mouseover = $('.mouseover');
+		//
+		// $mouseover.on('mouseenter', function() {
+		// 	$mouseover.get(0).play();
+		// });
+		//
+		// $mouseover.on('mouseout', function() {
+		// 	$mouseover.get(0).pause();
+		// 	$mouseover.get(0).currentTime = 0;
+		// });
 
-		$mouseover.on('mouseenter', function() {
-			$mouseover.get(0).play();
+
+		/****************************************************************************
+		X.X - Play-on-Hover Video */
+
+		var figure = $("video.mouseover");
+
+		[].forEach.call(figure, function (item,index) {
+		    item.addEventListener('mouseover', hoverVideo.bind(item,index), false);
+		    item.addEventListener('mouseout', hideVideo.bind(item,index), false);
 		});
 
-		$mouseover.on('mouseout', function() {
-			$mouseover.get(0).pause();
-		});
+		function hoverVideo(index, e) {
+		    figure[index].play();
+		}
+
+		function hideVideo(index, e) {
+		    figure[index].pause();
+				figure[index].currentTime = 0;
+		}
+
+
 
 		// Scrolly.
 		$('.scrolly').scrolly();

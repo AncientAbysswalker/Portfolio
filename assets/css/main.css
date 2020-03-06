@@ -647,11 +647,7 @@
 			width: 100%;
 		}
 
-			.image.fit img {
-				width: 100%;
-			}
-
-			.image.fit video {
+			.image.fit img, video {
 				width: 100%;
 			}
 
@@ -1127,9 +1123,9 @@
 				content: "\f00d";
 				-moz-osx-font-smoothing: grayscale;
 				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
+				font-family: "Font Awesome 5 Free";
 				font-style: normal;
-				font-weight: normal;
+				font-weight: 900; /* Must be 900 or will not detect icon properly */
 				text-transform: none !important;
 				display: block;
 				position: relative;
