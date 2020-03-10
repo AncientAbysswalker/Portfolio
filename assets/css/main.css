@@ -1,97 +1,97 @@
 @charset "UTF-8";
-/* @import "all.css"; */
-/* @import url(font-awesome.min.css); */
+
+/****************************************************************************
+0.0 - Imports */
+
 @import url("jquery.qtip.min.css");
 @import url("https://use.fontawesome.com/releases/v5.8.1/css/all.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Passion+One:400");
 
-/*
-	Full Motion by TEMPLATED
-	templated.co @templatedco
-	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
-*/
+/****************************************************************************
+1.0 - General Styling */
 
-/* Reset */
+/****************************************************************************
+1.0 - General */
 
-	html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-		margin: 0;
-		padding: 0;
-		border: 0;
-		font-size: 100%;
-		font: inherit;
-		vertical-align: baseline;
-	}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
-	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-		display: block;
-	}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 
-	body {
-		line-height: 1;
-	}
+body {
+	line-height: 1;
+}
 
-	ol, ul {
-		list-style: none;
-	}
+ol, ul {
+	list-style: none;
+}
 
-	blockquote, q {
-		quotes: none;
-	}
+blockquote, q {
+	quotes: none;
+}
 
-	blockquote:before, blockquote:after, q:before, q:after {
-		content: '';
-		content: none;
-	}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
 
-	table {
-		border-collapse: collapse;
-		border-spacing: 0;
-	}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
 
-	body {
-		-webkit-text-size-adjust: none;
-	}
+body {
+	-webkit-text-size-adjust: none;
+}
 
 /* Box Model */
 
-	*, *:before, *:after {
-		-moz-box-sizing: border-box;
-		-webkit-box-sizing: border-box;
-		box-sizing: border-box;
-	}
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
 
 /* Basic */
 
-	@-ms-viewport {
-		width: device-width;
+@-ms-viewport {
+	width: device-width;
+}
+
+body {
+	-ms-overflow-style: scrollbar;
+}
+
+@media screen and (max-width: 480px) {
+
+	html, body {
+		min-width: 320px;
 	}
 
-	body {
-		-ms-overflow-style: scrollbar;
-	}
+}
 
-	@media screen and (max-width: 480px) {
+body {
+	background: #202024;
+}
 
-		html, body {
-			min-width: 320px;
-		}
-
-	}
-
-	body {
-		background: #202024;
-	}
-
-		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
-			-moz-animation: none !important;
-			-webkit-animation: none !important;
-			-ms-animation: none !important;
-			animation: none !important;
-			-moz-transition: none !important;
-			-webkit-transition: none !important;
-			-ms-transition: none !important;
-			transition: none !important;
-		}
+body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+	-moz-animation: none !important;
+	-webkit-animation: none !important;
+	-ms-animation: none !important;
+	animation: none !important;
+	-moz-transition: none !important;
+	-webkit-transition: none !important;
+	-ms-transition: none !important;
+	transition: none !important;
+}
 
 /* Type */
 
@@ -298,368 +298,329 @@
 		margin-top: -0.6em;
 	}
 
-/* Box */
 
-	.thumbnails {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		-moz-align-items: stretch;
-		-webkit-align-items: stretch;
-		-ms-align-items: stretch;
-		align-items: stretch;
-		-moz-justify-content: center;
-		-webkit-justify-content: center;
-		-ms-justify-content: center;
-		justify-content: center;
-		-moz-flex-wrap: wrap;
-		-webkit-flex-wrap: wrap;
-		-ms-flex-wrap: wrap;
-		flex-wrap: wrap;
+/****************************************************************************
+1.0 - Gallery Boxes */
+
+/* Class containing all display boxes */
+.thumbnails {
+	display: -moz-flex;
+	display: -webkit-flex;
+	display: -ms-flex;
+	display: flex;
+	-moz-align-items: stretch;
+	-webkit-align-items: stretch;
+	-ms-align-items: stretch;
+	align-items: stretch;
+	-moz-justify-content: center;
+	-webkit-justify-content: center;
+	-ms-justify-content: center;
+	justify-content: center;
+	-moz-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+/* Width styling, with size breakpoints */
+.thumbnails .box {
+	width: 30%;
+}
+@media screen and (max-width: 1280px) {
+	.thumbnails .box {
+		width: 45%;
+	}
+}
+@media screen and (max-width: 736px) {
+	.thumbnails .box {
+		width: 100%;
+	}
+}
+
+/* Main styling */
+.box {
+	border-radius: 4px;
+	margin: 0 1em 2em 1em;
+	margin-bottom: 2em;
+	background: #2c2c32;
+	text-align: center;
+}
+
+/* Last child of each level down has no lower margin */
+.box > :last-child,
+.box > :last-child > :last-child,
+.box > :last-child > :last-child > :last-child {
+	margin-bottom: 0;
+}
+
+
+/****************************************************************************
+1.1 - Display Pane */
+
+/* No margin on display pane */
+.box .image.fit {
+	margin: 0;
+}
+
+/* Border radii of images and videos alike */
+.box .image img {
+	border-radius: 4px 4px 0 0;
+}
+.box .image video {
+	border-radius: 4px 4px 0 0;
+}
+
+
+/****************************************************************************
+1.2 - Description Pane */
+
+/* Padding and sizing for description pane, with size breakpoints */
+.box .inner {
+	padding: 1.5em;
+	/* padding-bottom: 0.5em; */
+	width: 100% !important;
+	border-color: blue;
+	border-style: solid;
+	border-width: 2px;
+}
+@media screen and (max-width: 480px) {
+	.box .inner {
+		padding: 1em;
+		/* padding-bottom: 0.5em; here */
+	}
+}
+
+
+/****************************************************************************
+2.0 - Technology Icons and Footer */
+
+/****************************************************************************
+2.1 - FontAwesome */
+
+.icon {
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+}
+.icon:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Font Awesome 5 Brands", "Font Awesome 5 Free";
+	font-style: normal;
+	font-weight: normal;
+	text-transform: none !important;
+}
+
+.icon > .label {
+	display: none;
+}
+
+
+/****************************************************************************
+2.3 - Additional SVG Technology Icons */
+
+@font-face {
+  font-family: 'icomoon';
+  src:  url('../fonts/icomoon.eot?h21r48');
+  src:  url('../fonts/icomoon.eot?h21r48#iefix') format('embedded-opentype'),
+    url('../fonts/icomoon.ttf?h21r48') format('truetype'),
+    url('../fonts/icomoon.woff?h21r48') format('woff'),
+    url('../fonts/icomoon.svg?h21r48#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+/* Add class name support for additional icons */
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Icon for ElectronJS */
+.icon-electron:before {
+  content: "\e900";
+}
+
+
+/****************************************************************************
+2.4 - Technology Footer */
+
+/* Overall Footer Block */
+.tech-footer {
+	font-size: 1.5em;
+	line-height: 1em;
+	margin: 0.5em 0 0.5em 0;
+	text-align: right;
+	color: #454545;
+	border-color: red;
+	border-style: solid;
+	border-width: 2px;
+}
+
+/* All tags one level deep in .tech-footer */
+.tech-footer > * {
+	margin: 0;
+	padding: 0;
+}
+
+
+/****************************************************************************
+2.5 - Tooltip Text */
+
+/* QTip (tooltip) Enabled Element. Any following spans with class .qtip-text
+will display the span text as a tooltip */
+.qtip-container {
+  position: relative;
+  display: inline-block;
+}
+
+/* Spans with this class will display their text as a tooltip */
+.qtip-text{
+    display: none;
+		font-size: 10pt;
+		font-weight: 300;
+		line-height: 1.65;
+		font-family: "Source Sans Pro", sans-serif;
+}
+
+
+/****************************************************************************
+3.0 - Poptrox - Lightbox */
+
+.poptrox-popup {
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box;
+	-ms-box-sizing: content-box;
+	box-sizing: content-box;
+	background: #000;
+	box-shadow: 0 0.5em 3em 0 rgba(0, 0, 0, 0.25);
+	border-radius: 4px;
+	padding: 2em;
+	overflow: hidden;
+}
+
+.poptrox-popup .closer {
+	-moz-transition: opacity 0.2s ease-in-out;
+	-webkit-transition: opacity 0.2s ease-in-out;
+	-ms-transition: opacity 0.2s ease-in-out;
+	transition: opacity 0.2s ease-in-out;
+	text-decoration: none;
+	position: absolute;
+	top: .5em;
+	right: .5em;
+	z-index: 11000;
+	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+	white-space: nowrap;
+	text-indent: 2em;
+	overflow: hidden;
+	width: 2em;
+	height: 2em;
+	display: block;
+}
+
+.poptrox-popup .closer:before {
+	content: "\f00d";
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-family: "Font Awesome 5 Free";
+	font-style: normal;
+	font-weight: 900; /* Must be 900 or will not detect icon properly */
+	text-transform: none !important;
+	display: block;
+	position: relative;
+	text-indent: 0;
+	border-radius: 100%;
+	box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
+	color: #ffffff !important;
+	width: 2em;
+	height: 2em;
+	line-height: 2em;
+}
+
+.poptrox-popup:hover .closer {
+opacity: 0.5;
+}
+
+.poptrox-popup:hover .closer:hover {
+	opacity: 1.0;
+}
+
+@media screen and (max-width: 736px) {
+	.poptrox-popup {
+		padding: 0;
 	}
 
-		.thumbnails .box {
-			margin: 0 1em 2em 1em;
-			width: 30%;
+	.poptrox-popup .closer {
+		display: none !important;
+	}
+}
+
+
+/****************************************************************************
+4.0 - Image Handling */
+
+.image {
+	border-radius: 4px;
+	border: 0;
+	display: inline-block;
+	position: relative;
+}
+
+	.image img, video{
+		border-radius: 4px;
+		display: block;
+	}
+
+	.image.left, .image.right {
+		max-width: 40%;
+	}
+
+		.image.left img, .image.right img {
+			width: 100%;
 		}
 
-			@media screen and (max-width: 1280px) {
+	.image.left {
+		float: left;
+		padding: 0 1.5em 1em 0;
+		top: 0.25em;
+	}
 
-				.thumbnails .box {
-					width: 45%;
-				}
+	.image.right {
+		float: right;
+		padding: 0 0 1em 1.5em;
+		top: 0.25em;
+	}
 
-			}
-
-			@media screen and (max-width: 736px) {
-
-				.thumbnails .box {
-					width: 100%;
-				}
-
-			}
-
-/* Form */
-
-	form {
+	.image.fit {
+		display: block;
 		margin: 0 0 2em 0;
-	}
-
-	label {
-		color: #fff;
-		display: block;
-		font-size: 0.9em;
-		font-weight: 400;
-		margin: 0 0 1em 0;
-	}
-
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	input[type="tel"],
-	select,
-	textarea {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		background: rgba(144, 144, 144, 0.075);
-		border-radius: 4px;
-		border: none;
-		border: solid 1px rgba(144, 144, 144, 0.25);
-		color: inherit;
-		display: block;
-		outline: 0;
-		padding: 0 1em;
-		text-decoration: none;
 		width: 100%;
 	}
 
-		input[type="text"]:invalid,
-		input[type="password"]:invalid,
-		input[type="email"]:invalid,
-		input[type="tel"]:invalid,
-		select:invalid,
-		textarea:invalid {
-			box-shadow: none;
-		}
-
-		input[type="text"]:focus,
-		input[type="password"]:focus,
-		input[type="email"]:focus,
-		input[type="tel"]:focus,
-		select:focus,
-		textarea:focus {
-			border-color: #ff8686;
-			box-shadow: 0 0 0 1px #ff8686;
-		}
-
-	.select-wrapper {
-		text-decoration: none;
-		display: block;
-		position: relative;
-	}
-
-		.select-wrapper:before {
-			content: "";
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-family: FontAwesome;
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
-		}
-
-		.select-wrapper:before {
-			color: rgba(144, 144, 144, 0.25);
-			display: block;
-			height: 2.75em;
-			line-height: 2.75em;
-			pointer-events: none;
-			position: absolute;
-			right: 0;
-			text-align: center;
-			top: 0;
-			width: 2.75em;
-		}
-
-		.select-wrapper select::-ms-expand {
-			display: none;
-		}
-
-	input[type="text"],
-	input[type="password"],
-	input[type="email"],
-	select {
-		height: 2.75em;
-	}
-
-	textarea {
-		padding: 0.75em 1em;
-	}
-
-	input[type="checkbox"],
-	input[type="radio"] {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-		-ms-appearance: none;
-		appearance: none;
-		display: block;
-		float: left;
-		margin-right: -2em;
-		opacity: 0;
-		width: 1em;
-		z-index: -1;
-	}
-
-		input[type="checkbox"] + label,
-		input[type="radio"] + label {
-			text-decoration: none;
-			color: rgba(255, 255, 255, 0.75);
-			cursor: pointer;
-			display: inline-block;
-			font-size: 1em;
-			font-weight: 300;
-			padding-left: 2.4em;
-			padding-right: 0.75em;
-			position: relative;
-		}
-
-			input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				font-family: FontAwesome;
-				font-style: normal;
-				font-weight: normal;
-				text-transform: none !important;
-			}
-
-			input[type="checkbox"] + label:before,
-			input[type="radio"] + label:before {
-				background: rgba(144, 144, 144, 0.075);
-				border-radius: 4px;
-				border: solid 1px rgba(144, 144, 144, 0.25);
-				content: '';
-				display: inline-block;
-				height: 1.65em;
-				left: 0;
-				line-height: 1.58125em;
-				position: absolute;
-				text-align: center;
-				top: 0;
-				width: 1.65em;
-			}
-
-		input[type="checkbox"]:checked + label:before,
-		input[type="radio"]:checked + label:before {
-			background: #ff8686;
-			border-color: #ff8686;
-			color: #ffffff;
-			content: '\f00c';
-		}
-
-		input[type="checkbox"]:focus + label:before,
-		input[type="radio"]:focus + label:before {
-			border-color: #ff8686;
-			box-shadow: 0 0 0 1px #ff8686;
-		}
-
-	input[type="checkbox"] + label:before {
-		border-radius: 4px;
-	}
-
-	input[type="radio"] + label:before {
-		border-radius: 100%;
-	}
-
-	::-webkit-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
-		opacity: 1.0;
-	}
-
-	:-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
-		opacity: 1.0;
-	}
-
-	::-moz-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
-		opacity: 1.0;
-	}
-
-	:-ms-input-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
-		opacity: 1.0;
-	}
-
-	.formerize-placeholder {
-		color: rgba(255, 255, 255, 0.5) !important;
-		opacity: 1.0;
-	}
-
-/* Box */
-
-	.box {
-		border-radius: 4px;
-		margin-bottom: 2em;
-		background: #2c2c32;
-		text-align: center;
-	}
-
-		.box > :last-child,
-		.box > :last-child > :last-child,
-		.box > :last-child > :last-child > :last-child {
-			margin-bottom: 0;
-		}
-
-		.box .image.fit {
-			margin: 0;
-		}
-
-		.box .image img {
-			border-radius: 4px 4px 0 0;
-		}
-
-		.box .inner {
-			padding: 1.5em;
-			/* padding-bottom: 0.5em; */
-			width: 100% !important;
-			border-color: blue;
-			border-style: solid;
-			border-width: 2px;
-		}
-
-			@media screen and (max-width: 480px) {
-
-				.box .inner {
-					padding: 1em;
-					/* padding-bottom: 0.5em; /* here */ */
-				}
-
-			}
-
-		.box.alt {
-			border: 0;
-			border-radius: 0;
-			padding: 0;
-		}
-
-/* Icon */
-
-	.icon {
-		text-decoration: none;
-		border-bottom: none;
-		position: relative;
-	}
-
-		.icon:before {
-			-moz-osx-font-smoothing: grayscale;
-			-webkit-font-smoothing: antialiased;
-			font-family: "Font Awesome 5 Brands", "Font Awesome 5 Free";
-			font-style: normal;
-			font-weight: normal;
-			text-transform: none !important;
-		}
-
-		.icon > .label {
-			display: none;
-		}
-
-/* Image */
-
-	.image {
-		border-radius: 4px;
-		border: 0;
-		display: inline-block;
-		position: relative;
-	}
-
-		.image img, video{
-			border-radius: 4px;
-			display: block;
-		}
-
-		.image.left, .image.right {
-			max-width: 40%;
-		}
-
-			.image.left img, .image.right img {
-				width: 100%;
-			}
-
-		.image.left {
-			float: left;
-			padding: 0 1.5em 1em 0;
-			top: 0.25em;
-		}
-
-		.image.right {
-			float: right;
-			padding: 0 0 1em 1.5em;
-			top: 0.25em;
-		}
-
-		.image.fit {
-			display: block;
-			margin: 0 0 2em 0;
+		.image.fit img, video {
 			width: 100%;
 		}
 
-			.image.fit img, video {
-				width: 100%;
-			}
+	.image.main {
+		display: block;
+		margin: 0 0 3em 0;
+		width: 100%;
+	}
 
-		.image.main {
-			display: block;
-			margin: 0 0 3em 0;
+		.image.main img {
 			width: 100%;
 		}
-
-			.image.main img {
-				width: 100%;
-			}
 
 /* List */
 
@@ -1088,75 +1049,7 @@
 
 /* Poptrox */
 
-	.poptrox-popup {
-		-moz-box-sizing: content-box;
-		-webkit-box-sizing: content-box;
-		-ms-box-sizing: content-box;
-		box-sizing: content-box;
-		background: #000;
-		box-shadow: 0 0.5em 3em 0 rgba(0, 0, 0, 0.25);
-		border-radius: 4px;
-		padding: 2em;
-		overflow: hidden;
-	}
 
-		.poptrox-popup .closer {
-			-moz-transition: opacity 0.2s ease-in-out;
-			-webkit-transition: opacity 0.2s ease-in-out;
-			-ms-transition: opacity 0.2s ease-in-out;
-			transition: opacity 0.2s ease-in-out;
-			text-decoration: none;
-			position: absolute;
-			top: .5em;
-			right: .5em;
-			z-index: 11000;
-			-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
-			white-space: nowrap;
-			text-indent: 2em;
-			overflow: hidden;
-			width: 2em;
-			height: 2em;
-			display: block;
-		}
-
-			.poptrox-popup .closer:before {
-				content: "\f00d";
-				-moz-osx-font-smoothing: grayscale;
-				-webkit-font-smoothing: antialiased;
-				font-family: "Font Awesome 5 Free";
-				font-style: normal;
-				font-weight: 900; /* Must be 900 or will not detect icon properly */
-				text-transform: none !important;
-				display: block;
-				position: relative;
-				text-indent: 0;
-				border-radius: 100%;
-				box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.25);
-				color: #ffffff !important;
-				width: 2em;
-				height: 2em;
-				line-height: 2em;
-			}
-
-		.poptrox-popup:hover .closer {
-			opacity: 0.5;
-		}
-
-		.poptrox-popup:hover .closer:hover {
-			opacity: 1.0;
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.poptrox-popup {
-				padding: 0;
-			}
-
-				.poptrox-popup .closer {
-					display: none !important;
-				}
-
-		}
 
 /* Banner */
 
@@ -1195,7 +1088,8 @@
 			color: #fff;
 			font-size: 5em;
 			font-weight: 400;
-			font-family: 'Passion One', cursive;
+			font-family: "Source Sans Pro", sans-serif;
+			/* font-family: 'Passion One', cursive; */
 			margin: 0;
 		}
 
@@ -1413,84 +1307,3 @@
 			}
 
 		}
-
-
-
-/****************************************************************************
-10.0 - Technology Footer */
-
-/* Overall Footer Block */
-.tech-footer {
-	font-size: 1.5em;
-	line-height: 1em;
-	margin: 0.5em 0 0.5em 0;
-	text-align: right;
-	color: #454545;
-	border-color: red;
-	border-style: solid;
-	border-width: 2px;
-}
-
-/* All tags one level deep in .tech-footer */
-.tech-footer > * {
-	margin: 0;
-	padding: 0;
-}
-
-
-/****************************************************************************
-10.1 - Tooltip Text */
-
-/* QTip (tooltip) Enabled Element. Any following spans with class .qtip-text
-will display the span text as a tooltip */
-.qtip-container {
-  position: relative;
-  display: inline-block;
-}
-
-/* Spans with this class will display their text as a tooltip */
-.qtip-text{
-    display: none;
-		font-size: 10pt;
-		font-weight: 300;
-		line-height: 1.65;
-		font-family: "Source Sans Pro", sans-serif;
-}
-
-
-/****************************************************************************
-10.2 - Additional SVG Technology Icons */
-
-
-@font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?h21r48');
-  src:  url('../fonts/icomoon.eot?h21r48#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?h21r48') format('truetype'),
-    url('../fonts/icomoon.woff?h21r48') format('woff'),
-    url('../fonts/icomoon.svg?h21r48#icomoon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-/* Add class name support for additional icons */
-[class^="icon-"], [class*=" icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Icon for ElectronJS */
-.icon-electron:before {
-  content: "\e900";
-}
